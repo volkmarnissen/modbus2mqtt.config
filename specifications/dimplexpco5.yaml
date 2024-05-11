@@ -1,0 +1,650 @@
+identified: 1
+entities:
+  - id: 2
+    modbusAddress: 3
+    converter:
+      name: sensor
+      functionCodes: []
+    functionCode: 21
+    converterParameters:
+      multiplier: 0.1
+      offset: 0
+      device_class: temperature
+      uom: °C
+      numberFormat: 0
+      identification:
+        min: 0
+        max: 70
+    mqttname: hotwatertemperature
+    valid: true
+  - id: 1
+    modbusAddress: 174
+    converter:
+      name: sensor
+      functionCodes: []
+    functionCode: 21
+    converterParameters:
+      multiplier: 1
+      offset: 0
+      device_class: temperature
+      uom: °C
+      numberFormat: 0
+      identification:
+        min: 30
+        max: 70
+    mqttname: hotwatertargettemperature
+    valid: true
+  - id: 0
+    modbusAddress: 1
+    converter:
+      name: sensor
+      functionCodes: []
+    functionCode: 21
+    converterParameters:
+      multiplier: 0.1
+      offset: 0
+      device_class: temperature
+      uom: °C
+      numberFormat: 0
+      identification:
+        min: -20
+        max: 50
+    mqttname: outertemperature
+    valid: true
+  - id: 3
+    modbusAddress: 11
+    converter:
+      name: sensor
+      functionCodes: []
+    functionCode: 21
+    converterParameters:
+      multiplier: 0.1
+      offset: 0
+      device_class: temperature
+      uom: °C
+      numberFormat: 0
+      identification:
+        min: 15
+        max: 30
+    mqttname: roomtemperature
+    valid: true
+  - id: 5
+    modbusAddress: 47
+    converter:
+      name: sensor
+      functionCodes: []
+    functionCode: 21
+    converterParameters:
+      multiplier: 0.1
+      offset: 0
+      device_class: temperature
+      uom: °C
+      numberFormat: 0
+      identification:
+        min: 0.5
+        max: 5
+    mqttname: hysteresis
+    valid: true
+    icon: alarm
+  - id: 4
+    modbusAddress: 46
+    converter:
+      name: number
+      functionCodes: []
+    functionCode: 21
+    converterParameters:
+      multiplier: 0.1
+      offset: 0
+      device_class: temperature
+      uom: °C
+      numberFormat: 0
+      identification:
+        min: 15
+        max: 30
+    mqttname: targetroomtemperature
+    valid: true
+  - functionCode: 21
+    converter:
+      name: select
+      functionCodes: []
+    modbusAddress: 192
+    id: 7
+    converterParameters:
+      multiplier: 1
+      offset: 0
+      numberFormat: 0
+      optionModbusValues:
+        - 0
+        - 1
+        - 3
+        - 5
+        - 2
+        - 4
+        - 6
+        - 7
+    valid: true
+    mqttname: selecttimetable
+  - id: 6
+    modbusAddress: 3
+    converter:
+      name: binary_sensor
+      functionCodes: []
+    functionCode: 20
+    converterParameters: {}
+    mqttname: externalloack
+    valid: true
+  - functionCode: 21
+    converter:
+      name: number
+      functionCodes: []
+    modbusAddress: 172
+    id: 10
+    converterParameters:
+      multiplier: 1
+      offset: 0
+      numberFormat: 0
+      identification:
+        min: 2
+        max: 15
+    valid: true
+    mqttname: hysteresishotwater
+  - functionCode: 21
+    converter:
+      name: select
+      functionCodes: []
+    modbusAddress: 142
+    id: 8
+    converterParameters:
+      multiplier: 1
+      offset: 0
+      numberFormat: 0
+      optionModbusValues:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+    valid: true
+    mqttname: operatingmode
+  - functionCode: 21
+    converter:
+      name: select_sensor
+      functionCodes: []
+    modbusAddress: 104
+    id: 9
+    converterParameters:
+      multiplier: 1
+      offset: 0
+      numberFormat: 0
+      optionModbusValues:
+        - 0
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 10
+        - 11
+        - 24
+        - 30
+    valid: true
+    mqttname: status
+  - functionCode: 21
+    converter:
+      name: number
+      functionCodes: []
+    modbusAddress: 193
+    id: 11
+    converterParameters:
+      multiplier: 1
+      offset: 0
+      numberFormat: 0
+      identification:
+        min: 0
+        max: 23
+    valid: true
+    mqttname: starthour1
+  - functionCode: 21
+    converter:
+      name: number
+      functionCodes: []
+    modbusAddress: 197
+    id: 16
+    converterParameters:
+      multiplier: 1
+      offset: 0
+      numberFormat: 0
+      identification:
+        min: 0
+        max: 23
+    valid: true
+    mqttname: starthour2
+  - functionCode: 21
+    converter:
+      name: number
+      functionCodes: []
+    modbusAddress: 194
+    id: 12
+    converterParameters:
+      multiplier: 1
+      offset: 0
+      numberFormat: 0
+      identification:
+        min: 0
+        max: 59
+    valid: true
+    mqttname: startminute1
+  - functionCode: 21
+    converter:
+      name: number
+      functionCodes: []
+    modbusAddress: 198
+    id: 17
+    converterParameters:
+      multiplier: 1
+      offset: 0
+      numberFormat: 0
+      identification:
+        min: 0
+        max: 59
+    valid: true
+    mqttname: startminute2
+  - functionCode: 21
+    converter:
+      name: number
+      functionCodes: []
+    modbusAddress: 195
+    id: 13
+    converterParameters:
+      multiplier: 1
+      offset: 0
+      numberFormat: 0
+      identification:
+        min: 0
+        max: 23
+    valid: true
+    mqttname: endofhour1
+  - functionCode: 21
+    converter:
+      name: number
+      functionCodes: []
+    modbusAddress: 199
+    id: 18
+    converterParameters:
+      multiplier: 1
+      offset: 0
+      numberFormat: 0
+      identification:
+        min: 0
+        max: 23
+    valid: true
+    mqttname: endofhour2
+  - functionCode: 21
+    converter:
+      name: number
+      functionCodes: []
+    modbusAddress: 196
+    id: 14
+    converterParameters:
+      multiplier: 1
+      offset: 0
+      numberFormat: 0
+      identification:
+        min: 0
+        max: 59
+    valid: true
+    mqttname: endofminute1
+  - functionCode: 21
+    converter:
+      name: number
+      functionCodes: []
+    modbusAddress: 200
+    id: 19
+    converterParameters:
+      multiplier: 1
+      offset: 0
+      numberFormat: 0
+      identification:
+        min: 0
+        max: 59
+    valid: true
+    mqttname: endofminute2
+  - functionCode: 21
+    converter:
+      name: select
+      functionCodes: []
+    modbusAddress: 201
+    id: 15
+    converterParameters:
+      multiplier: 1
+      offset: 0
+      numberFormat: 0
+      optionModbusValues:
+        - 0
+        - 1
+        - 2
+        - 3
+    valid: true
+    mqttname: sunday
+  - functionCode: 21
+    converter:
+      name: select
+      functionCodes: []
+    modbusAddress: 202
+    id: 20
+    converterParameters:
+      multiplier: 1
+      offset: 0
+      numberFormat: 0
+      optionModbusValues:
+        - 0
+        - 1
+        - 2
+        - 3
+    valid: true
+    mqttname: monday
+  - functionCode: 21
+    converter:
+      name: select
+      functionCodes: []
+    modbusAddress: 203
+    id: 21
+    converterParameters:
+      multiplier: 1
+      offset: 0
+      numberFormat: 0
+      optionModbusValues:
+        - 0
+        - 1
+        - 2
+        - 3
+    valid: true
+    mqttname: tuesday
+  - functionCode: 21
+    converter:
+      name: select
+      functionCodes: []
+    modbusAddress: 204
+    id: 22
+    converterParameters:
+      multiplier: 1
+      offset: 0
+      numberFormat: 0
+      optionModbusValues:
+        - 0
+        - 1
+        - 2
+        - 3
+    valid: true
+    mqttname: wednesday
+  - functionCode: 21
+    converter:
+      name: select
+      functionCodes: []
+    modbusAddress: 205
+    id: 23
+    converterParameters:
+      multiplier: 1
+      offset: 0
+      numberFormat: 0
+      optionModbusValues:
+        - 0
+        - 1
+        - 2
+        - 3
+    valid: true
+    mqttname: thursday
+  - functionCode: 21
+    converter:
+      name: select
+      functionCodes: []
+    modbusAddress: 206
+    id: 24
+    converterParameters:
+      multiplier: 1
+      offset: 0
+      numberFormat: 0
+      optionModbusValues:
+        - 0
+        - 1
+        - 2
+        - 3
+    valid: true
+    mqttname: friday
+  - functionCode: 21
+    converter:
+      name: select
+      functionCodes: []
+    modbusAddress: 207
+    id: 25
+    converterParameters:
+      multiplier: 1
+      offset: 0
+      numberFormat: 0
+      optionModbusValues:
+        - 0
+        - 1
+        - 2
+        - 3
+    valid: true
+    mqttname: saturday
+i18n:
+  - lang: en
+    texts:
+      - textId: name
+        text: Dimplex PCO5
+      - textId: e0
+        text: Outer Temperature
+      - textId: e1
+        text: Hot Water Target Temperature
+      - textId: e2
+        text: Hot Water Temperature
+      - textId: e3
+        text: Room Temperature
+      - textId: e4
+        text: Target Room Temperature
+      - textId: e5
+        text: Hysteresis
+      - textId: e6
+        text: External Lock
+      - textId: e7
+        text: Select Timetable
+      - textId: e7o.0
+        text: Not Selected
+      - textId: e7o.1
+        text: 1.HC Subsidence
+      - textId: e7o.3
+        text: 2.HC Subsidence
+      - textId: e7o.5
+        text: 3.HC Subsidence
+      - textId: e7o.2
+        text: 1.HC Raise
+      - textId: e7o.4
+        text: 2.HC Raise
+      - textId: e7o.6
+        text: 3.HC Raise
+      - textId: e7o.7
+        text: Warm Water Lock
+      - textId: e8
+        text: Operating Mode
+      - textId: e8o.1
+        text: Winter
+      - textId: e8o.2
+        text: Holiday
+      - textId: e8o.3
+        text: Party
+      - textId: e8o.4
+        text: 2.Heating
+      - textId: e8o.5
+        text: Cooling
+      - textId: e9
+        text: Status
+      - textId: e9o.1
+        text: Off
+      - textId: e9o.0
+        text: Off
+      - textId: e9o.2
+        text: Heating
+      - textId: e9o.3
+        text: Swimming pool
+      - textId: e9o.4
+        text: Hot water
+      - textId: e9o.5
+        text: Cooling
+      - textId: e9o.10
+        text: Defrost
+      - textId: e9o.11
+        text: Flow monitoring
+      - textId: e9o.24
+        text: Operating mode switchover delay
+      - textId: e9o.30
+        text: Lock
+      - textId: e10
+        text: Hysteresis hot water
+      - textId: e11
+        text: Start hour 1
+      - textId: e12
+        text: Start minute 1
+      - textId: e13
+        text: End of hour 1
+      - textId: e14
+        text: End of minute 1
+      - textId: e15
+        text: Sunday
+      - textId: e15o.0
+        text: yes
+      - textId: e15o.1
+        text: no
+      - textId: e15o.2
+        text: time 1
+      - textId: e15o.3
+        text: time 2
+      - textId: e7o.8
+        text: ebal
+      - textId: e16
+        text: Start hour 2
+      - textId: e17
+        text: Start minute 2
+      - textId: e18
+        text: End of hour2
+      - textId: e19
+        text: End of minute 2
+      - textId: e20
+        text: Monday
+      - textId: e20o.0
+        text: yes
+      - textId: e20o.1
+        text: no
+      - textId: e20o.2
+        text: time 1
+      - textId: e20o.3
+        text: time 2
+      - textId: e21
+        text: Tuesday
+      - textId: e21o.0
+        text: yes
+      - textId: e21o.1
+        text: no
+      - textId: e21o.2
+        text: time 1
+      - textId: e21o.3
+        text: time 2
+      - textId: e22
+        text: Wednesday
+      - textId: e22o.0
+        text: yes
+      - textId: e22o.1
+        text: no
+      - textId: e22o.2
+        text: time 1
+      - textId: e22o.3
+        text: time 2
+      - textId: e23
+        text: Thursday
+      - textId: e23o.0
+        text: yes
+      - textId: e23o.1
+        text: no
+      - textId: e23o.2
+        text: time 1
+      - textId: e23o.3
+        text: time 2
+      - textId: e24
+        text: Friday
+      - textId: e24o.0
+        text: yes
+      - textId: e24o.1
+        text: no
+      - textId: e24o.2
+        text: time 1
+      - textId: e24o.3
+        text: time 2
+      - textId: e25
+        text: Saturday
+      - textId: e25o.0
+        text: yes
+      - textId: e25o.1
+        text: no
+      - textId: e25o.2
+        text: time 1
+      - textId: e25o.3
+        text: time 2
+filename: dimplexpco5
+status: 2
+version: "0.1"
+testdata:
+  - address: 2100003
+    value: 473
+  - address: 2100174
+    value: 48
+  - address: 2100001
+    value: 150
+  - address: 2100011
+    value: 233
+  - address: 2100047
+    value: 38
+  - address: 2100046
+    value: 206
+  - address: 2100192
+    value: 3
+  - address: 2000003
+    value: 0
+  - address: 2100172
+    value: 7
+  - address: 2100142
+    value: 1
+  - address: 2100104
+    value: 0
+  - address: 2100193
+    value: 0
+  - address: 2100197
+    value: 0
+  - address: 2100194
+    value: 0
+  - address: 2100198
+    value: 0
+  - address: 2100195
+    value: 23
+  - address: 2100199
+    value: 0
+  - address: 2100196
+    value: 0
+  - address: 2100200
+    value: 0
+  - address: 2100201
+    value: 1
+  - address: 2100202
+    value: 1
+  - address: 2100203
+    value: 1
+  - address: 2100204
+    value: 1
+  - address: 2100205
+    value: 1
+  - address: 2100206
+    value: 1
+  - address: 2100207
+    value: 1
+model: SI 6
+manufacturer: Dimplex
+nextEntityId: 26
