@@ -1,69 +1,44 @@
+filename: waterleveltransmitter
+status: 1
 entities:
   - id: 1
-    converter: 
-      name: sensor
-    modbusAddress: 4
-    functionCode: 3
-    icon: ""
-    converterParameters:
-      multiplier: 0.1
-      offset: 0
-      uom: cm
-      identification:
-        min: 9
-        max: 200
-  - id: = 2
-    converter: 
-      name: select_sensor
-    modbusAddress: 2
-    functionCode: 21
-    icon: ""
-    converterParameters:
-      options:
-        - key: 1
-          name: cm
-        - key: 2
-          name: mm
-        - key: 3
-          name: mPa
-  - id:  3
-    converter: 
-      name: select_sensor
+    mqttname: waterleveltransmitter
+    converter:
+      name: number
+      registerTypes: []
     modbusAddress: 3
-    functionCode: 3
-    icon: ""
+    registerType: 3
     converterParameters:
-      options:
-        - key: 0
-          name: "1"
-        - key: 1
-          name: "0.1"
-        - key: 2
-          name: "0.01"
-        - key: 3
-          name: "0.001"
-manufacturer: unknown
-model: QDY30A
-files: 
-  - filename: 51WMttnsOML._AC_SX569_.jpg
-    usage: img
-  - filename: documentation.pdf
-    usage: doc
+      multiplier: 0.01
+      identification:
+        min: 0
+        max: 1
+  - id: 2
+    mqttname: ""
+    converter:
+      name: number
+      registerTypes: []
+    modbusAddress: 4
+    registerType: 3
+    converterParameters:
+      multiplier: 0.01
+    variableConfiguration:
+      targetParameter: 2
+      entityId: 1
 i18n:
-  - lang: "en" 
-    texts: 
+  - lang: en
+    texts:
       - textId: name
         text: Water Level Transmitter
-      - textId: e2
-        text: waterlevel.uom
-      - textId: e3
-        text: multiplier
-identified: 0
-version: "0.1"
-testData:
-  - address: 300004
-    value: 3
-  - address: 300002
-    value: 3
-  - address: 300003
-    value: 2
+      - textId: e1
+        text: Water Level Transmitter
+identified: -1
+version: "0.2"
+testdata: 
+  holdingRegisters:
+    - address: 3
+      value: 2
+    - address: 4
+      value: 2
+    - address: 100
+      value: null
