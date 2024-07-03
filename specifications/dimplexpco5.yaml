@@ -9,7 +9,7 @@ entities:
       offset: 0
       numberFormat: 0
       identification:
-        min: 30
+        min: 31
         max: 70
     mqttname: hotwatertargettemperature
     valid: true
@@ -219,11 +219,11 @@ testdata:
     - address: 174
       value: 48
     - address: 1
-      value: 183
+      value: 192
     - address: 3
-      value: 414
+      value: 475
     - address: 11
-      value: 240
+      value: 239
     - address: 47
       value: 38
     - address: 46
